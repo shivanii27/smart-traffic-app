@@ -27,8 +27,8 @@ st.write(
 # 2. Load & preprocess data (cached)
 @st.cache_data
 def load_data():
-    url = "https://raw.githubusercontent.com/selva86/datasets/master/Metro_Interstate_Traffic_Volume.csv"
-    df = pd.read_csv(url)
+    df = pd.read_csv("Metro_Interstate_Traffic_Volume.csv")
+
     df["date_time"] = pd.to_datetime(df["date_time"])
 
     # Time features
